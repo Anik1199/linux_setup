@@ -27,6 +27,19 @@ echo Dependencies installed!
 
 clear
 
+# Adapta
+echo Installing Adapta
+# If previous versions were installed/existed, remove them first.
+sudo rm -rf /usr/share/themes/{Adapta,Adapta-Eta,Adapta-Nokto,Adapta-Nokto-Eta}
+rm -rf ~/.local/share/themes/{Adapta,Adapta-Eta,Adapta-Nokto,Adapta-Nokto-Eta}
+rm -rf ~/.themes/{Adapta,Adapta-Eta,Adapta-Nokto,Adapta-Nokto-Eta}
+sudo add-apt-repository ppa:tista/adapta
+sudo apt -y update
+sudo apt install -y adapta-backgrounds adapta-gtk-theme
+echo Adapta installed!
+
+clear
+
 # Atom
 echo Installing Atom
 rm /tmp/atom-amd64.deb
